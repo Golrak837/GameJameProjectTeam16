@@ -69,6 +69,24 @@ public float moveSpeed;
             }
         }
 
+    public void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.name.Equals ("Platform"))
+        {
+            if (col.gameObject.name.Equals("Platform"))
+            {
+                this.transform.parent = col.transform;
+            }
+          
+        }
+    }
+
+    public void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.name.Equals ("Platform"))
+            this.transform.parent = null;
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.name=="DeathZone")
