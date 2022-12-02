@@ -17,7 +17,7 @@ public class move_japanese_char : MonoBehaviour
     public SpriteRenderer SpriteRendererJ;
     public Animator animatorJ;
     private bool candoublejump = false;
-
+    [SerializeField] private int offset = -30;
 
     // Start is called before the first frame update
     void Start()
@@ -93,6 +93,13 @@ public class move_japanese_char : MonoBehaviour
     {
         if (col.gameObject.name.Equals("Platform"))
             this.transform.parent = null;
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.name=="DeathZone")
+            rb2d.velocity = new Vector2(0, 0);
+            transform.position = GameObject.Find("Spawn").transform.position + new Vector3(offset,0,0);
     }
 
 }
