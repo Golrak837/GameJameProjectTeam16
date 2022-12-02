@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 200
-  jumpForce: 500
+  jumpForce: 300
   rb2d: {fileID: 385565898}
   velocity: {x: 0, y: 0}
   isJumping: 0
@@ -817,7 +817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 200
-  jumpForce: 500
+  jumpForce: 300
   rb2d: {fileID: 1406698478}
   velocity: {x: 0, y: 0}
   isJumping: 0
