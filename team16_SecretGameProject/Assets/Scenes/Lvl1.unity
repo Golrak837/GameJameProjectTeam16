@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 322252371}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheckLeft_B
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -194,7 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 363478833}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheckLeft_J
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 385565899}
   - component: {fileID: 385565898}
   - component: {fileID: 385565901}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Japanese_char
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 802669351}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheckRight_J
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -677,7 +677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1041293487}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheckRight_B
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -713,7 +713,7 @@ GameObject:
   - component: {fileID: 1406698478}
   - component: {fileID: 1406698477}
   - component: {fileID: 1406698480}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Belgian_char
   m_TagString: Untagged
   m_Icon: {fileID: 0}
