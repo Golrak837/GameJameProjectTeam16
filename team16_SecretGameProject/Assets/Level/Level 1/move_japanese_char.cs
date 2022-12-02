@@ -16,6 +16,7 @@ public class move_japanese_char : MonoBehaviour
     public Transform GroundCheckRightJ;
     public SpriteRenderer SpriteRendererJ;
     public Animator animatorJ;
+    private bool candoublejump = false;
 
 
     // Start is called before the first frame update
@@ -56,6 +57,13 @@ public class move_japanese_char : MonoBehaviour
         if(isJumping && isGrounded){
             rb2d.AddForce(new Vector2(0f,jumpForce));
             isJumping = false;
+            candoublejump = true;
+        }
+
+        else if(isJumping && candoublejump){
+            candoublejump = false;
+            rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
+            rb2d.AddForce(new Vector2(0f,jumpForce));
         }
     }
 
