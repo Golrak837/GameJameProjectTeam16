@@ -93,5 +93,4 @@ public float moveSpeed;
             rb2d.velocity = new Vector2(0, 0);
             transform.position = GameObject.Find("Spawn").transform.position + new Vector3(offset,0,0);
     }
-
 }
