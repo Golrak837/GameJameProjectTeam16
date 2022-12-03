@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class move_japanese_char : MonoBehaviour
 {
 
@@ -37,7 +37,7 @@ public class move_japanese_char : MonoBehaviour
             }       
         if (!(Mathf.Abs(rb2d.velocity.x) > 0.1f)) {
             audioSource.Stop();}
-        if((rb2d.velocity.x > 0.1f || rb2d.velocity.x < -0.1f) && !audioSource.isPlaying && !isJumping){
+        if((rb2d.velocity.x > 0.1f || rb2d.velocity.x < -0.1f) && !audioSource.isPlaying && !isJumping && isGrounded){
         audioSource.Play();
         }
     }
@@ -48,7 +48,9 @@ public class move_japanese_char : MonoBehaviour
         _horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
         isGrounded = Physics2D.OverlapArea(GroundCheckLeftJ.position,GroundCheckRightJ.position);
-        Debug.Log(isGrounded);
+        if(!isGrounded){
+            audioSource.Stop();
+        }
 
         Movepl(_horizontalMovement);
         Flip(rb2d.velocity.x);
@@ -118,6 +120,19 @@ public class move_japanese_char : MonoBehaviour
             haveKey = true;
             Destroy(col.gameObject);
         }
+
+        if (col.gameObject.name.Equals("Element")){
+            GameObject.Find("Element").GetComponent<AudioSource>().Play();
+            Debug.Log("hello");
+            StartCoroutine(waitcor());
+
+        }
+    }
+
+    IEnumerator waitcor()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Hub");
     }
 
     public bool GetHaveKey()

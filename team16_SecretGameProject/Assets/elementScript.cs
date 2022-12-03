@@ -5,7 +5,7 @@ using UnityEngine;
 public class elementScript : MonoBehaviour
 {
     // Start is called before the first frame update
-public bool touchElement = false;
+    public bool touchElement = false;
     private void Start()
     {
         touchElement = false;

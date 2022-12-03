@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-
+using UnityEngine.SceneManagement;
 public class move_belgian_char : MonoBehaviour
 {
 public float moveSpeed;
@@ -40,7 +40,7 @@ public float moveSpeed;
             audioSource.Stop();
         }
 
-        if((rb2d.velocity.x > 0.1f || rb2d.velocity.x < -0.1f) && !audioSource.isPlaying && !isJumping){
+        if((rb2d.velocity.x > 0.1f || rb2d.velocity.x < -0.1f) && !audioSource.isPlaying && !isJumping && isGrounded){
             audioSource.Play();
         }   
     }
@@ -52,7 +52,9 @@ public float moveSpeed;
 
         isGrounded = Physics2D.OverlapArea(GroundCheckLeftB.position,GroundCheckRightB.position);
 
-
+        if(!isGrounded){
+            audioSource.Stop();
+        }
         Movepl(_horizontalMovement);
         Flip(rb2d.velocity.x);
         
@@ -118,6 +120,19 @@ public float moveSpeed;
             haveKey = true;
             Destroy(col.gameObject);
         }
+
+        if (col.gameObject.name.Equals("Element")){
+            GameObject.Find("Element").GetComponent<AudioSource>().Play();
+            StartCoroutine(waitcor());
+            
+        }
+    }
+
+    IEnumerator waitcor()
+    {
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Hub");
     }
 
     public bool GetHaveKey()
