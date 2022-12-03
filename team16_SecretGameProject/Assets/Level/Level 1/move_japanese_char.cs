@@ -58,7 +58,7 @@ public class move_japanese_char : MonoBehaviour
         // Debug.Log("moveplayer");
         Vector2 targetVelocity = new Vector2(_horizontalMovement,rb2d.velocity.y);
         rb2d.velocity = Vector2.SmoothDamp(rb2d.velocity,targetVelocity, ref velocity, .05f);        
-        if((rb2d.velocity.x > 0.1f ||rb2d.velocity.x < -0.1f) && !audioSource.isPlaying){
+        if((rb2d.velocity.x > 0.1f ||rb2d.velocity.x < -0.1f) && !audioSource.isPlaying && !isJumping){
             audioSource.Play();
         }
         if(isJumping && isGrounded){
