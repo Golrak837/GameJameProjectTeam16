@@ -7627,8 +7627,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KeyUI: {fileID: 2037688148}
-  JapChar: {fileID: 0}
-  BelChar: {fileID: 0}
+  JapChar: {fileID: 677249651}
+  BelChar: {fileID: 760963738}
 --- !u!114 &1948185804
 MonoBehaviour:
   m_ObjectHideFlags: 0
