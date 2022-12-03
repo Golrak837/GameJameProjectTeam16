@@ -72,14 +72,10 @@ public float moveSpeed;
 
     public void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name.Equals ("Platform"))
-        {
             if (col.gameObject.name.Equals("Platform"))
             {
                 this.transform.parent = col.transform;
             }
-          
-        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
