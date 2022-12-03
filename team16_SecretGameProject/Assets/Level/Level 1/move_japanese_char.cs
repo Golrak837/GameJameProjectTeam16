@@ -17,7 +17,7 @@ public class move_japanese_char : MonoBehaviour
     public SpriteRenderer SpriteRendererJ;
     public Animator animatorJ;
     private bool candoublejump = false;
-    [SerializeField] private int offset = -30;
+    [SerializeField] private int offset = -1;
     private AudioSource audioSource;
     public bool haveKey = false;
 
@@ -37,6 +37,9 @@ public class move_japanese_char : MonoBehaviour
             }       
         if (!(Mathf.Abs(rb2d.velocity.x) > 0.1f)) {
             audioSource.Stop();}
+        if((rb2d.velocity.x > 0.1f || rb2d.velocity.x < -0.1f) && !audioSource.isPlaying && !isJumping){
+        audioSource.Play();
+        }
     }
 
     void FixedUpdate()
@@ -58,16 +61,16 @@ public class move_japanese_char : MonoBehaviour
         // Debug.Log("moveplayer");
         Vector2 targetVelocity = new Vector2(_horizontalMovement,rb2d.velocity.y);
         rb2d.velocity = Vector2.SmoothDamp(rb2d.velocity,targetVelocity, ref velocity, .05f);        
-        if((rb2d.velocity.x > 0.1f ||rb2d.velocity.x < -0.1f) && !audioSource.isPlaying && !isJumping){
-            audioSource.Play();
-        }
+        
         if(isJumping && isGrounded){
+            audioSource.Stop();
             rb2d.AddForce(new Vector2(0f,jumpForce));
             isJumping = false;
             candoublejump = true;
         }
 
         else if(isJumping && candoublejump){
+            audioSource.Stop();
             candoublejump = false;
             rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
             rb2d.AddForce(new Vector2(0f,jumpForce));

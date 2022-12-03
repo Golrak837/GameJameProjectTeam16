@@ -16,7 +16,8 @@ public float moveSpeed;
     public Transform GroundCheckRightB;
     public SpriteRenderer SpriteRendererB;
     public Animator animatorB;
-    [SerializeField] private int offset = 30;
+    [SerializeField] private int offset = 1;
+    private AudioSource audioSource;
 
     public bool haveKey = false;
 
@@ -24,6 +25,7 @@ public float moveSpeed;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D> ();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,7 +34,15 @@ public float moveSpeed;
          if(Input.GetKeyDown(KeyCode.Space))
             {
                 isJumping=true;
-            }       
+            }    
+
+        if (!(Mathf.Abs(rb2d.velocity.x) > 0.1f)) {
+            audioSource.Stop();
+        }
+
+        if((rb2d.velocity.x > 0.1f || rb2d.velocity.x < -0.1f) && !audioSource.isPlaying && !isJumping){
+            audioSource.Play();
+        }   
     }
 
     void FixedUpdate()
@@ -56,6 +66,7 @@ public float moveSpeed;
         rb2d.velocity = Vector2.SmoothDamp(rb2d.velocity,targetVelocity, ref velocity, .05f);        
 
         if(isJumping && isGrounded){
+            audioSource.Stop();
             rb2d.AddForce(new Vector2(0f,jumpForce));
             isJumping = false;
         }
