@@ -9,6 +9,12 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.2d.sprite": {
+      "version": "file:C:/Program Files/Unity 2021.3.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.17.6",
       "depth": 0,
