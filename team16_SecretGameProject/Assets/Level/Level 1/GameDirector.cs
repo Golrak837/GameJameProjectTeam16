@@ -11,8 +11,8 @@ public class GameDirector : MonoBehaviour
 
     private bool haveKey = false;
 
-    [SerializeField] private GameObject door;
-    private DoorScript doorScript;
+    [SerializeField] private GameObject element;
+    private elementScript elementScript;
 
     // Start is called before the first frame update
     void Start()
@@ -22,25 +22,16 @@ public class GameDirector : MonoBehaviour
         japanese = Players[0].GetComponent<move_japanese_char>();
         belgian = Players[1].GetComponent<move_belgian_char>();
 
-        doorScript = door.GetComponent<DoorScript>();
+        elementScript = element.GetComponent<elementScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(haveKey);
-        if(!haveKey)
-        {
-            haveKey = japanese.GetHaveKey();
-            if (!haveKey) haveKey = belgian.GetHaveKey();
-        }
-        else
-        {
-            if(doorScript.GetTouchDoor() && Input.GetKey(KeyCode.Space))
+            if(elementScript.GetTouchElement())
             {
                 //  Clear
                 SceneManager.LoadScene("Hub");
             }
-        }
     }
 }
