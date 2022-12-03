@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class move_belgian_char : MonoBehaviour
 {
@@ -112,4 +113,59 @@ public float moveSpeed;
     {
         return haveKey;
     }
+
+        
+    //Character and broken block hit detection
+    private void OnCollisionStay2D(Collision2D collision)
+        {
+            if(collision.gameObject.CompareTag("BreakBlock"))
+            {
+                if (Input.GetKey(KeyCode.Q))
+                {
+                    Vector3 hitPos = Vector3.zero;
+
+                    foreach (ContactPoint2D point in collision.contacts)
+                    {
+                        hitPos = point.point;
+                    }
+
+                    BoundsInt.PositionEnumerator position = collision.gameObject.GetComponent<Tilemap>().cellBounds.allPositionsWithin;
+                    var allPosition = new List<Vector3>();
+
+                    int minPositionNum = 0;
+
+                    foreach (var variable in position)
+                    {
+                        if (collision.gameObject.GetComponent<Tilemap>().GetTile(variable) != null)
+                        {
+                            allPosition.Add(variable);
+                        }
+                    }
+
+                    for (int i = 1; i < allPosition.Count; i++)
+                    {
+                        if ((hitPos - allPosition[i]).magnitude <
+                            (hitPos - allPosition[minPositionNum]).magnitude)
+                        {
+                            minPositionNum = i;
+                        }
+                    }
+
+                    Vector3Int finalPosition = Vector3Int.RoundToInt(allPosition[minPositionNum]);
+
+
+                    TileBase tiletmp = collision.gameObject.GetComponent<Tilemap>().GetTile(finalPosition);
+
+                    if (tiletmp != null)
+                    {
+                        Tilemap map = collision.gameObject.GetComponent<Tilemap>();
+                        TilemapCollider2D tileCol = collision.gameObject.GetComponent<TilemapCollider2D>();
+
+                        map.SetTile(finalPosition, null);
+                        tileCol.enabled = false;
+                        tileCol.enabled = true;
+                    }
+                }
+            }
+        }
 }
