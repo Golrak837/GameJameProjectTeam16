@@ -379,6 +379,9 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  player2Layer:
+    serializedVersion: 2
+    m_Bits: 128
   etat: 4
 --- !u!212 &409181394
 SpriteRenderer:
@@ -507,6 +510,9 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  player2Layer:
+    serializedVersion: 2
+    m_Bits: 128
   etat: 1
 --- !u!212 &482422438
 SpriteRenderer:
@@ -969,6 +975,9 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  player2Layer:
+    serializedVersion: 2
+    m_Bits: 128
   etat: 3
 --- !u!212 &950849979
 SpriteRenderer:
@@ -1309,6 +1318,9 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  player2Layer:
+    serializedVersion: 2
+    m_Bits: 128
   etat: 5
 --- !u!212 &1429596137
 SpriteRenderer:
@@ -1812,6 +1824,9 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  player2Layer:
+    serializedVersion: 2
+    m_Bits: 128
   etat: 2
 --- !u!212 &1714552663
 SpriteRenderer:

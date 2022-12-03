@@ -419,6 +419,7 @@ GameObject:
   - component: {fileID: 385565899}
   - component: {fileID: 385565898}
   - component: {fileID: 385565901}
+  - component: {fileID: 385565902}
   m_Layer: 6
   m_Name: Japanese_char
   m_TagString: Player
@@ -510,7 +511,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -554,8 +555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd0bf51c7584314ca843a3302e59ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 200
-  jumpForce: 300
+  moveSpeed: 250
+  jumpForce: 550
   rb2d: {fileID: 385565898}
   velocity: {x: 0, y: 0}
   isJumping: 0
@@ -586,6 +587,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &385565902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385565895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b45a1e834394e34aa40dc2c72d5f47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nbrEtatElement: 0
 --- !u!1 &442638121
 GameObject:
   m_ObjectHideFlags: 3
@@ -632,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0.45
+  m_LookaheadTime: 0.5
   m_LookaheadSmoothing: 20
   m_LookaheadIgnoreY: 0
   m_XDamping: 1
@@ -720,8 +734,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0.475
-  m_LookaheadSmoothing: 20.3
+  m_LookaheadTime: 0.5
+  m_LookaheadSmoothing: 20
   m_LookaheadIgnoreY: 0
   m_XDamping: 1
   m_YDamping: 1
@@ -1543,7 +1557,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1561,8 +1575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76889a64e9094fd4f9a19e0dbefd4af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 200
-  jumpForce: 300
+  moveSpeed: 250
+  jumpForce: 550
   rb2d: {fileID: 1406698478}
   velocity: {x: 0, y: 0}
   isJumping: 0
