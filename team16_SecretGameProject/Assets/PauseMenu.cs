@@ -18,9 +18,12 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
+                GameObject.Find("Japanese_char").GetComponent<AudioSource>().Stop();
+                GameObject.Find("Belgian_char").GetComponent<AudioSource>().Stop();
                 pauseMenuUI.SetActive(true);
                 Time.timeScale = 0;
                 gamePaused = true;
+
             }
         }
     }
