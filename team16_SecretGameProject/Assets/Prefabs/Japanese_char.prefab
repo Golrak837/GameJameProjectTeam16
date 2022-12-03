@@ -135,8 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd0bf51c7584314ca843a3302e59ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 250
-  jumpForce: 550
+  moveSpeed: 450
+  jumpForce: 700
   rb2d: {fileID: 5881146548613026725}
   velocity: {x: 0, y: 0}
   isJumping: 0

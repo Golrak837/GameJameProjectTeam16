@@ -121,4 +121,9 @@ public class move_japanese_char : MonoBehaviour
     {
         return haveKey;
     }
+    
+    public void SetHaveKey()
+    {
+        haveKey = !haveKey;
+    }
 }
