@@ -140,6 +140,11 @@ public float moveSpeed;
         return haveKey;
     }
 
+    public void SetHaveKey()
+    {
+        haveKey = !haveKey;
+    }
+
         
     //Character and broken block hit detection
     private void OnCollisionStay2D(Collision2D collision)
