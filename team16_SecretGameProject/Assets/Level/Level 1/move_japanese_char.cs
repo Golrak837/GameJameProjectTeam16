@@ -42,7 +42,7 @@ public class move_japanese_char : MonoBehaviour
         _horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
         isGrounded = Physics2D.OverlapArea(GroundCheckLeftJ.position,GroundCheckRightJ.position);
-
+        Debug.Log(isGrounded);
 
         Movepl(_horizontalMovement);
         Flip(rb2d.velocity.x);
