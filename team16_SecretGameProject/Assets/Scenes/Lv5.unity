@@ -184,7 +184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2825621319887753702, guid: 4534200e10ff0ae4f9206e2c004627f3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.81
+      value: 3.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825621319887753702, guid: 4534200e10ff0ae4f9206e2c004627f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.46
       objectReference: {fileID: 0}
     - target: {fileID: 2825621320997863028, guid: 4534200e10ff0ae4f9206e2c004627f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5537,6 +5541,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5881146548613026727, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
+      propertyPath: jumpForce
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881146548613026727, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
+      propertyPath: moveSpeed
+      value: 450
+      objectReference: {fileID: 0}
     - target: {fileID: 5881146548613026747, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
       propertyPath: m_Name
       value: Japanese_char
@@ -6021,6 +6033,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2199090573343281094, guid: 4888a56002f28dc4caf9759de42d9f44, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2199090573343281095, guid: 4888a56002f28dc4caf9759de42d9f44, type: 3}
       propertyPath: m_Name
       value: Door
