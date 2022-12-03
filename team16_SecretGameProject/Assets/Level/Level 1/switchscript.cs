@@ -5,7 +5,6 @@ using UnityEngine;
 public class switchscript : MonoBehaviour
 {
     // Start is called before the first frame update
- 
      public move_japanese_char PlayerA;
      public move_belgian_char PlayerB;
  
