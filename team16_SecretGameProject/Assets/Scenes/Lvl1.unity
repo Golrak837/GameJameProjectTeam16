@@ -734,6 +734,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &460141036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8368535996091111390, guid: 37c61efc1c2c9e243a248382afba48bc, type: 3}
+  m_PrefabInstance: {fileID: 2096689874}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &540105855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,6 +1279,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76889a64e9094fd4f9a19e0dbefd4af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &1406698481
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406698474}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.35, y: -0.76}
+  m_Size: {x: 1.35, y: 4.19}
+  m_Direction: 0
 --- !u!1 &1419093513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1895,7 +1916,7 @@ MonoBehaviour:
   Players:
   - {fileID: 745168590}
   - {fileID: 1406698474}
-  element: {fileID: 8368535996091111390, guid: 37c61efc1c2c9e243a248382afba48bc, type: 3}
+  element: {fileID: 460141036}
 --- !u!4 &1800832218
 Transform:
   m_ObjectHideFlags: 0
@@ -2861,6 +2882,18 @@ PrefabInstance:
     - target: {fileID: 5366242247475010592, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366242247475010593, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
+      propertyPath: m_Size.y
+      value: 4.2269797
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366242247475010593, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.31392992
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366242247475010593, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.56940436
       objectReference: {fileID: 0}
     - target: {fileID: 5366242247475010598, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
       propertyPath: m_Name

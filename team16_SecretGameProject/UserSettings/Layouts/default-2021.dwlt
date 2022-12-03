@@ -480,7 +480,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 216
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 2e150000
       m_LastClickedID: 0
       m_ExpandedIDs: 3a7bffff4c7bffff5c7bffffcc7bffff2880ffff3a80ffff4280ffff4c80ffff9e81ffff0282ffffe482ffffe88bffffa48effff9c93ffff8a9fffff9aa1ffff82c8ffff30c9ffffc8c9ffffcccbffff9accfffff8dfffff02e0ffffdeefffff9cf0ffff66f1ffffd0f1ffff80f2ffffe4f2ffff92f3fffff6f3ffffa4f4ffff08f5ffffb8f5ffff1cf6ffffd8f6ffff50f7ffff1af8ffffc8f8ffff82f9ffff12fbffff5a6600006a8200007e82000006830000388300000a8500001e850000ac850000de850000fe850000e28f0000f68f000086900000c2900000e2900000be9d0000d29d0000629e0000e8a60000
       m_RenameOverlay:
