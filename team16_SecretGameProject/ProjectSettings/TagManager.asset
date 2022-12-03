@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Platform
+  - Death
+  - BreakBlock
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -39,12 +42,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2431842001
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: test1
-    uniqueID: 2431842001
-    locked: 0
-  - name: test2
+  - name: Foreground
     uniqueID: 440756349
     locked: 0
