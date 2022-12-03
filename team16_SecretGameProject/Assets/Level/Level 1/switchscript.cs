@@ -17,6 +17,8 @@ public class switchscript : MonoBehaviour
          PlayerA = GameObject.Find("Japanese_char").GetComponent<move_japanese_char>();
          PlayerB = GameObject.Find("Belgian_char").GetComponent<move_belgian_char>();
          PlayerB.GetComponent<move_belgian_char>().enabled = false;
+        GameObject.Find("Japanese_char").GetComponent<AudioSource>().Stop();
+        GameObject.Find("Belgian_char").GetComponent<AudioSource>().Stop();
      }
  
      // Update is called once per frame
@@ -24,6 +26,8 @@ public class switchscript : MonoBehaviour
      {
          if (Input.GetKeyDown("e"))
          {
+            GameObject.Find("Japanese_char").GetComponent<AudioSource>().Stop();
+            GameObject.Find("Belgian_char").GetComponent<AudioSource>().Stop();
 
              camera.GetComponent<CinemachineVirtualCamera>().enabled =
                  !camera.GetComponent<CinemachineVirtualCamera>().enabled;

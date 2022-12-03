@@ -10,7 +10,7 @@ public class GameDirector : MonoBehaviour
     private move_belgian_char belgian;
 
     private bool haveKey = false;
-
+    private bool beingHandled = false;
     [SerializeField] private GameObject element;
     private elementScript elementScript;
 
@@ -28,10 +28,21 @@ public class GameDirector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if(elementScript.GetTouchElement())
+            if(elementScript.GetTouchElement() && !beingHandled)
             {
                 //  Clear
-                SceneManager.LoadScene("Hub");
+                // GameObject.Find("Element").GetComponent<AudioSource>().Play();
+                // StartCoroutine(waitcor());
+                // SceneManager.LoadScene("Hub");
+                Debug.Log("testingreload");
             }
+    }
+
+    IEnumerator waitcor()
+    {
+        beingHandled=true;
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(2);
+        beingHandled=false;
     }
 }
