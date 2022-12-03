@@ -1098,6 +1098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1193187934}
+  camera2: {fileID: 1419093513}
   PlayerA: {fileID: 385565900}
   PlayerB: {fileID: 1406698479}
 --- !u!1 &909134964
