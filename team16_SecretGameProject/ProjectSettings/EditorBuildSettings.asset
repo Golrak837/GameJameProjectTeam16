@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lv5.unity
     guid: ac8ae51f465a5f94a98bb4a3753509f9
+  - enabled: 1
+    path: Assets/Scenes/EndingVideo.unity
+    guid: 30fd10d8370b61248be1a0256ee0cc4d
   m_configObjects: {}
