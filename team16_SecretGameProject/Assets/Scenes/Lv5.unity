@@ -12797,6 +12797,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Japanese_char
       objectReference: {fileID: 0}
+    - target: {fileID: 7454623368700377022, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
 --- !u!114 &762808589 stripped
@@ -13899,6 +13903,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6584933517543820363, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
 --- !u!114 &1672702214 stripped
@@ -13938,7 +13946,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b931158332c634e448e34a1d31de0f6b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
