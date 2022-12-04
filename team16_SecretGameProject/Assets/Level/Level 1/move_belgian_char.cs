@@ -76,6 +76,9 @@ public float moveSpeed;
             rb2d.AddForce(new Vector2(0f,jumpForce));
             isJumping = false;
         }
+        else{
+            isJumping=false;
+        }
     }
 
     void Flip(float _velocity){
