@@ -141,7 +141,7 @@ public float moveSpeed;
     IEnumerator waitcor()
     {
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Hub");
     }
 
