@@ -180,6 +180,7 @@ MonoBehaviour:
   offset: 1
   audioSource_move: {fileID: 6584933517543820363}
   audioSource_break: {fileID: 6234944803645647248}
+  breakAnim: {fileID: 39729379948860450, guid: d18b9ab77f604ac4f831810eac8f1ffd, type: 3}
   haveKey: 0
 --- !u!50 &6086610383683214901
 Rigidbody2D:
