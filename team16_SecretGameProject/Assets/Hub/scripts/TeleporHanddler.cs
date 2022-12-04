@@ -14,7 +14,7 @@ public class TeleporHanddler : MonoBehaviour
         if (playerLayer != (playerLayer | 1 << col.gameObject.layer)) return;
         if (sceneOrder <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
         }
         else
         {
