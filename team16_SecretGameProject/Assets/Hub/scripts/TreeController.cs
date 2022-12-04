@@ -45,7 +45,7 @@ public class TreeController : MonoBehaviour
                  if (nbrElement == 5)
                  {
                      Debug.Log("You save the Planet!");
-                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+                     SceneManager.LoadScene("EndingVideo");
                  }
                  
              }
