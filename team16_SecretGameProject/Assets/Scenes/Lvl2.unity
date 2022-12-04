@@ -7236,6 +7236,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2011285409}
     - target: {fileID: 6010739861419190001, guid: 5507ef27d1ab3c74c82353ca72ad6e34, type: 3}
+      propertyPath: m_Volume
+      value: 0.766
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010739861419190001, guid: 5507ef27d1ab3c74c82353ca72ad6e34, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
@@ -7368,6 +7372,10 @@ PrefabInstance:
     - target: {fileID: 5851445071319138891, guid: de6656234e2504e45b7ffae09efa6bc8, type: 3}
       propertyPath: m_Name
       value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144542010964809057, guid: de6656234e2504e45b7ffae09efa6bc8, type: 3}
+      propertyPath: Priority
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 6144542010964809057, guid: de6656234e2504e45b7ffae09efa6bc8, type: 3}
       propertyPath: m_PlayOnAwake
