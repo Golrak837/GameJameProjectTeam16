@@ -71,6 +71,8 @@ public float moveSpeed;
         rb2d.velocity = Vector2.SmoothDamp(rb2d.velocity,targetVelocity, ref velocity, .05f);        
 
         if(isJumping && isGrounded){
+
+            animatorB.SetBool("isJumping",true);
             audioSource_move.Stop();
             jumpSound.Play();
             rb2d.AddForce(new Vector2(0f,jumpForce));
@@ -78,6 +80,7 @@ public float moveSpeed;
         }
         else{
             isJumping=false;
+            animatorB.SetBool("isJumping",false);
         }
     }
 
