@@ -111,6 +111,7 @@ public class move_japanese_char : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Death"))
         {
+            GameObject.Find("Deathzone").GetComponent<AudioSource>().Play();
             rb2d.velocity = new Vector2(0, 0);
             transform.position = GameObject.Find("Spawn").transform.position + new Vector3(offset, 0, 0);
         }
