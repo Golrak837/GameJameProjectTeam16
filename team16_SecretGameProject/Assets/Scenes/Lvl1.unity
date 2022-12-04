@@ -12270,6 +12270,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.73
       objectReference: {fileID: 0}
+    - target: {fileID: 6584933517543820363, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584933517543820363, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
+      propertyPath: BypassReverbZones
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
 --- !u!1001 &5699892314166667142
@@ -12449,8 +12457,16 @@ PrefabInstance:
       value: -1.783
       objectReference: {fileID: 0}
     - target: {fileID: 7454623368700377022, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454623368700377022, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
       propertyPath: MinDistance
       value: 0.8594103
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454623368700377022, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8849970223668331387, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
       propertyPath: m_Size.x

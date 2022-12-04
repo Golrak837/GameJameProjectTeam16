@@ -213,7 +213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &209242889
 RectTransform:
   m_ObjectHideFlags: 0
@@ -422,7 +422,7 @@ PrefabInstance:
     - target: {fileID: 8368535996091111384, guid: 37c61efc1c2c9e243a248382afba48bc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: daac60038b8efb5488eba9b278662247, type: 3}
+      objectReference: {fileID: 21300000, guid: 5e07880f5508e5143bfa6de4210425e0, type: 3}
     - target: {fileID: 8368535996091111385, guid: 37c61efc1c2c9e243a248382afba48bc, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -675,13 +675,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8876133527852572140, guid: 1cae9280096715440ae9c27e5334032e, type: 3}
+      propertyPath: m_Size.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876133527852572141, guid: 1cae9280096715440ae9c27e5334032e, type: 3}
+      propertyPath: m_Size.x
+      value: 27.373735
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876133527852572141, guid: 1cae9280096715440ae9c27e5334032e, type: 3}
+      propertyPath: m_Offset.x
+      value: 2.0789366
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876133527852572141, guid: 1cae9280096715440ae9c27e5334032e, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8876133527852572143, guid: 1cae9280096715440ae9c27e5334032e, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8876133527852572143, guid: 1cae9280096715440ae9c27e5334032e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 150
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8876133527852572143, guid: 1cae9280096715440ae9c27e5334032e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10394,7 +10410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1623569965
 RectTransform:
   m_ObjectHideFlags: 0
