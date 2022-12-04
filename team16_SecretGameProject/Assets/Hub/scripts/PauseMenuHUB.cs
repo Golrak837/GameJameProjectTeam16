@@ -1,7 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenuHUB : MonoBehaviour
 {
     public static bool gamePaused = false;
 
@@ -11,18 +13,15 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(gamePaused)
+            if (gamePaused)
             {
                 Resume();
             }
             else
             {
-                GameObject.Find("Japanese_char").GetComponent<AudioSource>().Stop();
-                GameObject.Find("Belgian_char").GetComponent<AudioSource>().Stop();
                 pauseMenuUI.SetActive(true);
-                Time.timeScale = 0;
                 gamePaused = true;
 
             }
@@ -32,14 +31,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1;
         gamePaused = false;
-    }
-
-    public void LoadHub()
-    {
-        Resume();
-        SceneManager.LoadScene("Hub");
     }
 
     public void MainTitle()
