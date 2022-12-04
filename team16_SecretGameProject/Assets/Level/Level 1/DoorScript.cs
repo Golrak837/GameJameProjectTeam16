@@ -5,6 +5,9 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     public bool touchDoor = false;
+    public AudioSource openSound;
+    public AudioSource closedSound;
+
     private void Start()
     {
         touchDoor = false;
@@ -19,18 +22,25 @@ public class DoorScript : MonoBehaviour
         {
             if (dam.GetHaveKey())
             {
-                GetComponent<AudioSource>().Play();
+                openSound.Play();
 
                 dam.SetHaveKey();
                 Destroy(gameObject);
             }
+            else{
+            closedSound.Play();
+            }
+
         }else if (dam2 != null)
         {
             if (dam2.GetHaveKey())
             {
-                GetComponent<AudioSource>().Play();
+                openSound.Play();
                 dam2.SetHaveKey();
                 Destroy(gameObject);
+            }            
+            else{
+                closedSound.Play();
             }
         }
         
