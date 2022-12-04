@@ -27,6 +27,8 @@ public class TreeController : MonoBehaviour
         if (dam != null)
         {
              nbrElement = dam.nbrEtatElement;
+             Debug.Log("You have" );
+             Debug.Log(nbrElement);
              if (nbrElement > stateArbre)
              {
                  Debug.Log("Etat :" + nbrElement);
