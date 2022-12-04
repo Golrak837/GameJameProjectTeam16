@@ -1597,6 +1597,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Japanese_char
       objectReference: {fileID: 0}
+    - target: {fileID: 7454623368700377022, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454623368700377022, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
 --- !u!4 &1074538114 stripped
@@ -16077,6 +16085,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6086610383683214903, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584933517543820363, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
