@@ -12820,6 +12820,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5881146548613026747, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
   m_PrefabInstance: {fileID: 762808588}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &762808592 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5881146548613026746, guid: 7c8c01b455603ab46acdc7dda2a0df2a, type: 3}
+  m_PrefabInstance: {fileID: 762808588}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &846586605
 GameObject:
   m_ObjectHideFlags: 3
@@ -13917,6 +13922,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6086610383683214897, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
   m_PrefabInstance: {fileID: 1672702213}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1672702217 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6086610383683214891, guid: 2c6fa875b6f96014a92d53c99dc78556, type: 3}
+  m_PrefabInstance: {fileID: 1672702213}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &1672702222
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14579,5 +14589,13 @@ PrefabInstance:
       propertyPath: camera2
       value: 
       objectReference: {fileID: 1801229624}
+    - target: {fileID: 5699892314957463374, guid: 5507ef27d1ab3c74c82353ca72ad6e34, type: 3}
+      propertyPath: animatorB
+      value: 
+      objectReference: {fileID: 1672702217}
+    - target: {fileID: 5699892314957463374, guid: 5507ef27d1ab3c74c82353ca72ad6e34, type: 3}
+      propertyPath: animatorJ
+      value: 
+      objectReference: {fileID: 762808592}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5507ef27d1ab3c74c82353ca72ad6e34, type: 3}

@@ -7,6 +7,15 @@ public class MovementPlayer : MonoBehaviour
     private Vector3 direction;
     [SerializeField] private float speed;
     private bool m_FarcingRight = true;
+    public AudioSource audioSource;
+    public Rigidbody2D rb2d;
+    [SerializeField] private Vector2 velocity = Vector2.zero;
+
+    void Start(){
+        rb2d = GetComponent<Rigidbody2D> ();
+        audioSource = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -14,12 +23,17 @@ public class MovementPlayer : MonoBehaviour
     }
     
     private void Move()
-    {
+    {   
         direction = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
         var deplacement = direction * speed * Time.deltaTime;
         if ((deplacement.x < 0 && m_FarcingRight) || (deplacement.x > 0 && !m_FarcingRight))
         {
+            audioSource.Play();
             Flip();
+        }
+        else if (deplacement.x==0 && deplacement.y ==0){
+                audioSource.Stop();
+
         }
         
         transform.position += deplacement;
