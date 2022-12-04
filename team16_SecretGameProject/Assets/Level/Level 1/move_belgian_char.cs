@@ -167,7 +167,7 @@ public float moveSpeed;
         {
             if(collision.gameObject.CompareTag("BreakBlock"))
             {
-                if (Input.GetKey(KeyCode.Q))
+                if (Input.GetKey(KeyCode.LeftShift))
                 {
                     audioSource_break.Play();
                     Vector3 hitPos = Vector3.zero;
