@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class UIKey : MonoBehaviour
 {
-    public GameObject KeyUI;
+    public GameObject KeyUIJap;
+    public GameObject KeyUIBel;
     public GameObject JapChar;
     public GameObject BelChar;
 
@@ -16,14 +17,21 @@ public class UIKey : MonoBehaviour
         if (key.GetHaveKey())
         {
             Debug.Log("Key!");
-            KeyUI.SetActive(true);
-         }  
-        else if (key2.GetHaveKey())
+            KeyUIJap.SetActive(true);
+        }
+        else
+        {
+            KeyUIJap.SetActive(false);
+        }
+        if (key2.GetHaveKey())
         {
             Debug.Log("Key!");
-            KeyUI.SetActive(true);
+            KeyUIBel.SetActive(true);
         }
-        else KeyUI.SetActive(false);
+        else
+        {
+            KeyUIBel.SetActive(false);
+        }
 
         
 
