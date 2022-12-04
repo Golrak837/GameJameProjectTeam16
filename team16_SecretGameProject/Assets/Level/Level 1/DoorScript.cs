@@ -25,7 +25,7 @@ public class DoorScript : MonoBehaviour
                 openSound.Play();
 
                 dam.SetHaveKey();
-                Destroy(gameObject);
+                StartCoroutine(waitDes());
             }
             else{
             closedSound.Play();
@@ -37,7 +37,8 @@ public class DoorScript : MonoBehaviour
             {
                 openSound.Play();
                 dam2.SetHaveKey();
-                Destroy(gameObject);
+                StartCoroutine(waitDes());
+
             }            
             else{
                 closedSound.Play();
@@ -45,6 +46,13 @@ public class DoorScript : MonoBehaviour
         }
         
     }
+
+    IEnumerator waitDes()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         touchDoor = false;
