@@ -19,6 +19,8 @@ public class DoorScript : MonoBehaviour
         {
             if (dam.GetHaveKey())
             {
+                GetComponent<AudioSource>().Play();
+
                 dam.SetHaveKey();
                 Destroy(gameObject);
             }
@@ -26,6 +28,7 @@ public class DoorScript : MonoBehaviour
         {
             if (dam2.GetHaveKey())
             {
+                GetComponent<AudioSource>().Play();
                 dam2.SetHaveKey();
                 Destroy(gameObject);
             }

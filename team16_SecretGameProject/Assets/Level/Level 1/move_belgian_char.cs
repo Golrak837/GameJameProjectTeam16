@@ -17,7 +17,9 @@ public float moveSpeed;
     public SpriteRenderer SpriteRendererB;
     public Animator animatorB;
     [SerializeField] private int offset = 1;
-    private AudioSource audioSource;
+    public AudioSource audioSource_move;
+    public AudioSource audioSource_break;
+
 
     public bool haveKey = false;
 
@@ -25,7 +27,6 @@ public float moveSpeed;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D> ();
-        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,11 +38,11 @@ public float moveSpeed;
             }    
 
         if (!(Mathf.Abs(rb2d.velocity.x) > 0.1f)) {
-            audioSource.Stop();
+            audioSource_move.Stop();
         }
 
-        if((rb2d.velocity.x > 0.1f || rb2d.velocity.x < -0.1f) && !audioSource.isPlaying && !isJumping && isGrounded){
-            audioSource.Play();
+        if((rb2d.velocity.x > 0.1f || rb2d.velocity.x < -0.1f) && !audioSource_move.isPlaying && !isJumping && isGrounded){
+            audioSource_move.Play();
         }   
     }
 
@@ -53,7 +54,7 @@ public float moveSpeed;
         isGrounded = Physics2D.OverlapArea(GroundCheckLeftB.position,GroundCheckRightB.position);
 
         if(!isGrounded){
-            audioSource.Stop();
+            audioSource_move.Stop();
         }
         Movepl(_horizontalMovement);
         Flip(rb2d.velocity.x);
@@ -68,7 +69,7 @@ public float moveSpeed;
         rb2d.velocity = Vector2.SmoothDamp(rb2d.velocity,targetVelocity, ref velocity, .05f);        
 
         if(isJumping && isGrounded){
-            audioSource.Stop();
+            audioSource_move.Stop();
             rb2d.AddForce(new Vector2(0f,jumpForce));
             isJumping = false;
         }
@@ -117,6 +118,7 @@ public float moveSpeed;
 
         if (col.gameObject.CompareTag("Key"))
         {
+            GameObject.Find("Keysound").GetComponent<AudioSource>().Play();
             haveKey = true;
             Destroy(col.gameObject);
         }
@@ -126,6 +128,12 @@ public float moveSpeed;
             StartCoroutine(waitcor());
             
         }
+    }
+
+    IEnumerator waitDes(Collider2D col)
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(col.gameObject);
     }
 
     IEnumerator waitcor()
@@ -153,6 +161,7 @@ public float moveSpeed;
             {
                 if (Input.GetKey(KeyCode.Q))
                 {
+                    audioSource_break.Play();
                     Vector3 hitPos = Vector3.zero;
 
                     foreach (ContactPoint2D point in collision.contacts)

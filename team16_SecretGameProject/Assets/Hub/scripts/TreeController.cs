@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TreeController : MonoBehaviour
 {
@@ -31,7 +32,12 @@ public class TreeController : MonoBehaviour
                  Debug.Log("Etat :" + nbrElement);
                  stateArbre = nbrElement;
                  LoadAndSave.instance.SaveStateTree(nbrElement);
-                 if(nbrElement==5) Debug.Log("You save the Planet!");
+                 if (nbrElement == 5)
+                 {
+                     Debug.Log("You save the Planet!");
+                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+                 }
+                 
              }
              else
              {
