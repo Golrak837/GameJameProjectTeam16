@@ -40,6 +40,7 @@ public class TreeController : MonoBehaviour
                  Debug.Log("Etat :" + nbrElement);
                  stateArbre = nbrElement;
                  LoadAndSave.instance.SaveStateTree(nbrElement);
+                 audio.Play();
                  StartCoroutine(ExampleCoroutine());
                  if (nbrElement == 5)
                  {
