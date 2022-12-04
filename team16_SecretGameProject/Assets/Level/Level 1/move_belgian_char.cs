@@ -19,7 +19,7 @@ public float moveSpeed;
     [SerializeField] private int offset = 1;
     public AudioSource audioSource_move;
     public AudioSource audioSource_break;
-
+    public AudioSource jumpSound;
     [SerializeField] private GameObject breakAnim;
 
 
@@ -72,8 +72,12 @@ public float moveSpeed;
 
         if(isJumping && isGrounded){
             audioSource_move.Stop();
+            jumpSound.Play();
             rb2d.AddForce(new Vector2(0f,jumpForce));
             isJumping = false;
+        }
+        else{
+            isJumping=false;
         }
     }
 
