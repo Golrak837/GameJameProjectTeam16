@@ -21,22 +21,27 @@ public class LoadAndSave : MonoBehaviour
         if (PlayerPrefs.GetInt("Fire",0)==1)
         {
             EtatElementPlayer.instance.SetElement(1);
+            Destroy(GameObject.Find("teleporterScene1"));
         }
         if (PlayerPrefs.GetInt("Earth",0)==1)
         {
             EtatElementPlayer.instance.SetElement(2);
+            Destroy(GameObject.Find("teleporterScene2"));
         }
         if (PlayerPrefs.GetInt("Water",0)==1)
         {
             EtatElementPlayer.instance.SetElement(3);
+            Destroy(GameObject.Find("teleporterScene3"));
         }
         if (PlayerPrefs.GetInt("Wind",0)==1)
         {
             EtatElementPlayer.instance.SetElement(4);
+            Destroy(GameObject.Find("teleporterScene4"));
         }
         if (PlayerPrefs.GetInt("Void",0)==1)
         {
             EtatElementPlayer.instance.SetElement(5);
+            Destroy(GameObject.Find("teleporterScene5"));
         }
         TreeController.instance.SetDefaultStateTree(PlayerPrefs.GetInt("TreeStatus",0));
         
