@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
     public static bool gamePaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject HowToPlay;
 
     // Update is called once per frame
     void Update()
@@ -39,5 +40,14 @@ public class PauseMenu : MonoBehaviour
     {
         Resume();
         SceneManager.LoadScene("Hub");
+    }
+
+    public void HowToPLay()
+    {
+        HowToPlay.SetActive(true);
+    }
+    public void HowToPLayBack()
+    {
+        HowToPlay.SetActive(false);
     }
 }
