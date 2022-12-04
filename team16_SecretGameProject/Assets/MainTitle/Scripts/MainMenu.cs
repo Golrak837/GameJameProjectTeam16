@@ -13,7 +13,12 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("Wind",0);
         PlayerPrefs.SetInt("Void",0);
         PlayerPrefs.SetInt("TreeStatus",0);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Hub");
+    }
+
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void QuitGame()
