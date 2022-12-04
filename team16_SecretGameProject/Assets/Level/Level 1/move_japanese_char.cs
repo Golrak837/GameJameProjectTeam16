@@ -57,6 +57,7 @@ public class move_japanese_char : MonoBehaviour
         Flip(rb2d.velocity.x);
         
         animatorJ.SetFloat("Speed",Mathf.Abs(rb2d.velocity.x));
+
     }
 
     void Movepl(float _horizontalMovement)
@@ -66,19 +67,31 @@ public class move_japanese_char : MonoBehaviour
         rb2d.velocity = Vector2.SmoothDamp(rb2d.velocity,targetVelocity, ref velocity, .05f);        
         
         if(isJumping && isGrounded){
+            
+            animatorJ.SetBool("isJumping", true);
+
             audioSource.Stop();
             jumpSoundJ.Play();
+
             rb2d.AddForce(new Vector2(0f,jumpForce));
             isJumping = false;
             candoublejump = true;
         }
 
         else if(isJumping && candoublejump){
+            
+            animatorJ.SetBool("isJumping", true);
+
             audioSource.Stop();
             jumpSoundJ.Play();
             candoublejump = false;
             rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
             rb2d.AddForce(new Vector2(0f,jumpForce));
+        }
+        else{
+            isJumping=false;
+            animatorJ.SetBool("isJumping", false);
+
         }
     }
 
