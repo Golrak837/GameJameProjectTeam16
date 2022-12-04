@@ -20,6 +20,8 @@ public float moveSpeed;
     public AudioSource audioSource_move;
     public AudioSource audioSource_break;
 
+    [SerializeField] private GameObject breakAnim;
+
 
     public bool haveKey = false;
 
@@ -139,7 +141,7 @@ public float moveSpeed;
     IEnumerator waitcor()
     {
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Hub");
     }
 
@@ -192,6 +194,11 @@ public float moveSpeed;
                     }
 
                     Vector3Int finalPosition = Vector3Int.RoundToInt(allPosition[minPositionNum]);
+
+                GameObject anim = Instantiate(breakAnim);
+                anim.transform.position = finalPosition;
+
+                Debug.Log(finalPosition);
 
 
                     TileBase tiletmp = collision.gameObject.GetComponent<Tilemap>().GetTile(finalPosition);
