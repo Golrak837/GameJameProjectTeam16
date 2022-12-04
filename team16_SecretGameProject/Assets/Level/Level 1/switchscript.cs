@@ -10,6 +10,8 @@ public class switchscript : MonoBehaviour
     [SerializeField] public GameObject camera2;
     public move_japanese_char PlayerA;
     public move_belgian_char PlayerB;
+    public Animator animatorB;
+    public Animator animatorJ;
  
      // Use this for initialization
      void Start()
@@ -26,6 +28,10 @@ public class switchscript : MonoBehaviour
      {
          if (Input.GetKeyDown("e"))
          {
+        
+            animatorB.SetFloat("Speed",Mathf.Abs(0));
+            animatorJ.SetFloat("Speed",Mathf.Abs(0));
+
             GameObject.Find("Japanese_char").GetComponent<AudioSource>().Stop();
             GameObject.Find("Belgian_char").GetComponent<AudioSource>().Stop();
             GetComponent<AudioSource>().Play();
