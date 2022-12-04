@@ -19,6 +19,7 @@ public class move_japanese_char : MonoBehaviour
     private bool candoublejump = false;
     [SerializeField] private int offset = -1;
     private AudioSource audioSource;
+    public AudioSource jumpSoundJ;
     public bool haveKey = false;
 
     // Start is called before the first frame update
@@ -66,6 +67,7 @@ public class move_japanese_char : MonoBehaviour
         
         if(isJumping && isGrounded){
             audioSource.Stop();
+            jumpSoundJ.Play();
             rb2d.AddForce(new Vector2(0f,jumpForce));
             isJumping = false;
             candoublejump = true;
@@ -73,6 +75,7 @@ public class move_japanese_char : MonoBehaviour
 
         else if(isJumping && candoublejump){
             audioSource.Stop();
+            jumpSoundJ.Play();
             candoublejump = false;
             rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
             rb2d.AddForce(new Vector2(0f,jumpForce));
