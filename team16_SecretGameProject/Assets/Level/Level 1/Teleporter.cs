@@ -10,6 +10,7 @@ public class Teleporter : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            GetComponent<AudioSource>().Play();
             Debug.Log("Player detected");
             other.transform.position = new Vector2(tpPos.position.x, tpPos.position.y);
         }

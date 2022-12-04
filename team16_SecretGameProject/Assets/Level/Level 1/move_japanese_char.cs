@@ -117,6 +117,8 @@ public class move_japanese_char : MonoBehaviour
 
         if(col.gameObject.CompareTag("Key"))
         {
+            Debug.Log("fkzesfkzesfkzesfkzesfkzesfkzesfkzesfkzesfkzesfkzes");
+            GameObject.Find("Keysound").GetComponent<AudioSource>().Play();
             haveKey = true;
             Destroy(col.gameObject);
         }
@@ -129,6 +131,11 @@ public class move_japanese_char : MonoBehaviour
         }
     }
 
+    IEnumerator waitDes(Collider2D col)
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(col.gameObject);
+    }
     IEnumerator waitcor()
     {
         yield return new WaitForSeconds(2);

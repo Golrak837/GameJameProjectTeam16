@@ -28,7 +28,7 @@ public class switchscript : MonoBehaviour
          {
             GameObject.Find("Japanese_char").GetComponent<AudioSource>().Stop();
             GameObject.Find("Belgian_char").GetComponent<AudioSource>().Stop();
-
+            GetComponent<AudioSource>().Play();
              camera.GetComponent<CinemachineVirtualCamera>().enabled =
                  !camera.GetComponent<CinemachineVirtualCamera>().enabled;
              camera2.GetComponent<CinemachineVirtualCamera>().enabled =
