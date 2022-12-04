@@ -542,6 +542,10 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6483924075778835211, guid: 37c61efc1c2c9e243a248382afba48bc, type: 3}
+      propertyPath: etat
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8368535996091111384, guid: 37c61efc1c2c9e243a248382afba48bc, type: 3}
       propertyPath: m_Sprite
       value: 
